@@ -27,13 +27,14 @@ body {
   #tombolaContainer {
     width: 600px;
     margin: 0 auto;
+    background-color: #af4c4c;
   }
   
   #tombola {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 2px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #af4c4c;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
@@ -42,7 +43,7 @@ body {
     border: 1px solid black;
     text-align: center;
     font-size: 24px;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: background-color 0.3s;
   }
   
@@ -53,3 +54,4 @@ body {
   .selected {
     background-color: yellow !important;
   }
+  

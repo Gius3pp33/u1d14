@@ -11,13 +11,20 @@ const createCells = (numeroCelle) => {
     tombolaContainer.appendChild(cella);
     arrayNumeri.push(cella);
   }
-};
+}
 
-// Funzione per estrarre un numero casuale da 1 a 76
+// Funzione per estrarre un numero casuale da 1 a 76, escludendo i numeri già estratti
 function estraiNumero() {
   console.log("Estrazione numero casuale");
 
-  return Math.floor(Math.random() * 76) + 1;
+  let numero;
+  do {
+    numero = Math.floor(Math.random() * 76) + 1;
+  } while (arrayNumeri[numero - 1].classList.contains("estratto"));
+
+  arrayNumeri[numero - 1].classList.add("estratto");
+
+  return numero;
 }
 
 // Funzione per evidenziare la cella corrispondente al numero estratto
@@ -25,7 +32,7 @@ function evidenziaCella(numero) {
   console.log("Evidenzia cella corrispondente al numero " + numero);
 
   // Rimuovo la classe "selected" da tutte le celle
-  arrayNumeri.forEach((cella) => {
+  arrayNumeri.forEach(cella => {
     cella.classList.remove("selected");
   });
 
@@ -34,12 +41,12 @@ function evidenziaCella(numero) {
 }
 
 // Creazione della tabella al caricamento della pagina
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function() {
   createCells(76); // Creiamo la tabella con 76 celle al caricamento della pagina
 });
 
 // Gestore dell'evento di click del bottone per l'estrazione di un numero
-document.getElementById("estraiNumero").addEventListener("click", function () {
+document.getElementById("estraiNumero").addEventListener("click", function() {
   let numeroEstratto = estraiNumero();
   console.log("Numero estratto: " + numeroEstratto);
   evidenziaCella(numeroEstratto);
