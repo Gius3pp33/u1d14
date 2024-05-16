@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #estraiNumero {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #estraiNumero:hover {
+    background-color: #0056b3;
+  }
+  
+  #tombolaContainer {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  #tombola {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 2px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .cella {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .cella:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .selected {
+    background-color: yellow !important;
+  }
