@@ -54,4 +54,16 @@ body {
   .selected {
     background-color: yellow !important;
   }
-  
+  #reset {
+      display: block;
+    
+    background-color: #3d0707;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
